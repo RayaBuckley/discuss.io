@@ -7,11 +7,9 @@ If a task conflicts with this file, the assistant stops and asks a human.
 
 ## Goal
 
-Build a tool that structures a discussion as a tree.
+Build software that structures a discussion as a tree.
 
-A spoken discussion meanders. A written tree keeps each point in one place.
-Participants resolve each branch before the discussion moves on.
-When all branches are resolved, the root disagreement is visible.
+Start with MVP prototype.
 
 ## Constraints
 
@@ -22,3 +20,11 @@ When all branches are resolved, the root disagreement is visible.
 - Test coverage should only count tests that meaningfully test the end behaviour, not source-code tests. 
 - TODO.md is the only list of deferred code tasks.
 - Each TODO entry has exactly one detail file in todo/.
+
+## Architecture
+
+Host over LAN (i.e. local host)
+
+## Rough notes
+
+I think my idea is similar to IBIS, though more focused on logical reasoning. The discussion starts with a statement, then objections to that statement are subchildren, and so on building a tree structure. When a substatement is conceded, it becomes archived and the parent is updated (the archive needs the agreement of the owner of the subchild). It should have a source control structure where edits are recorded -- the child nodes should be marked as potentially outdated.
