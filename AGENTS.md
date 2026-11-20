@@ -3,31 +3,21 @@
 ## Start of each session
 
 1. Read HUMAN.md.
-2. Read TODO.md.
-3. Do not edit HUMAN.md.
-4. If a task conflicts with HUMAN.md, stop and ask a human.
+2. Do not edit HUMAN.md.
+3. If a task conflicts with HUMAN.md, stop and ask a human.
 
-## Allowed Markdown files
+## Markdown files
 
-Only these Markdown files exist:
+These Markdown files exist:
 
-- README.md
-- AGENTS.md
-- HUMAN.md
-- TODO.md
-- todo/NNNN-slug.md
-
-Do not create other Markdown files.
-Do not create docs/ directories, changelogs, design notes, or architecture files.
-The code is the documentation.
-Make the code clear with good names and small functions.
+- README.md - Documentation (all files and purposes, description of project, etc.)
+- AGENTS.md - Instructions for agents
+- HUMAN.md - Read only for agents, source of truth
 
 ## Comments
 
-Do not write comments in code.
-This includes docstrings, section markers, and commented-out code.
-If code needs a comment, rename the identifier or split the function.
-Exception: a directive that a tool requires, for example a linter pragma or a shebang.
+Add a comment at the top of each code file with the intended purpose of that file.
+Write minimal comments - make code self documenting as far as possible.
 
 ## Prose
 
@@ -42,7 +32,7 @@ Write in ASD-STE100 Simplified Technical English.
 - Use a word in only one part of speech.
 - Do not use idioms, slang, or figurative language.
 - Do not use marketing words, hedges, or filler.
-- Write what is true now. Do not write history or plans in prose. Put plans in TODO.md.
+- Write what is true now. Do not write history or plans in prose. 
 - Define each project term once. The code name for the term is the same word.
 
 ## Tests
@@ -57,24 +47,6 @@ Test quality is more important than test count.
 - Give each test a name that states the task and the expected result.
 - Delete a test that fails for reasons that are not bugs.
 - Keep the full test suite under five minutes.
-
-## Deferred tasks
-
-TODO.md is the only list of deferred code tasks.
-Do not write TODO, FIXME, or similar markers in code or in other files.
-
-- Each entry in TODO.md has one line and links to one file: todo/NNNN-slug.md.
-- Each file in todo/ belongs to exactly one entry.
-- NNNN is a four-digit number. Do not reuse a number.
-- To finish a task, delete the entry and its file in the same commit as the code.
-- Each task file has these sections in this order: Problem, Cause, Acceptance, Notes.
-- The Acceptance section states a test that proves the task is done.
-
-TODO.md entry format:
-
-    - [ ] NNNN Short title: [todo/NNNN-slug.md](todo/NNNN-slug.md)
-
-Run scripts/check-repo.sh before each commit. It must pass.
 
 ## Commits
 
